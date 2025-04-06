@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Kristine's Forever Home - Adopt a Loving Cat",
   description: "Meet Kristine, a loving and playful one-year-old cat looking for her forever home!",
   icons: {
-    icon: "/kristine_favicon",
+    icon: "/favicon.ico",
   },
 }
 

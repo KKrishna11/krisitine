@@ -932,15 +932,6 @@ export default function Home() {
               <div>
                 <h4 className="font-medium mb-4">Contact</h4>
                 <ul className="space-y-2">
-                  <li className="flex items-center gap-2 text-gray-600">
-                    <Mail className="h-4 w-4" />
-                    <a
-                      href="mailto:krishna.kushwaha2312@gmail.com"
-                      className="text-blue-600 hover:underline"
-                    >
-                      krishna.kushwaha2312@gmail.com
-                    </a>
-                  </li>
                   <li className="flex items-center gap-2  text-gray-600">
                     <Phone className="h-4 w-4" />
                     <a
@@ -948,6 +939,17 @@ export default function Home() {
                       className="text-blue-600 hover:underline "
                     >
                       9922379106
+                    </a>
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <Phone className="h-4 w-4" />
+                    <a
+                      href="https://wa.me/919922379106?text=I'm%20interested%20in%20adopting%20Kristine"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline"
+                    >
+                      WhatsApp
                     </a>
                   </li>
                 </ul>
