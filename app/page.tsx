@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Mail, Phone, Menu, X } from "lucide-react";
+import { Mail, Phone, Menu, X,MessageCircleMore } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { toast } from "sonner";
 
@@ -942,7 +942,7 @@ export default function Home() {
                     </a>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
-                    <Phone className="h-4 w-4" />
+                    <MessageCircleMore className="h-4 w-4" />
                     <a
                       href="https://wa.me/919922379106?text=I'm%20interested%20in%20adopting%20Kristine"
                       target="_blank"
