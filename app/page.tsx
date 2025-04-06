@@ -24,13 +24,12 @@ export default function Home() {
   const autoplayRef = useRef(null);
 
   // Gallery images
-  
+
   const galleryImages = [
     { id: 1, src: "/sunshine.jpeg", alt: "Kristine the cat photo 1" },
     { id: 2, src: "/sleeping-beauty.jpg", alt: "Kristine the cat photo 2" },
     { id: 4, src: "/relax.jpeg", alt: "Kristine the cat photo 4" },
   ];
-
 
   // Form state
   const [formData, setFormData] = useState({
@@ -180,15 +179,7 @@ export default function Home() {
 
   if (loading || !mounted) {
     return (
-        <div className="h-screen w-full flex flex-col items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900">
-
-
-
-
-
-
-
-
+      <div className="h-screen w-full flex flex-col items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900">
         <div className="cat">
           <div className="cat-body"></div>
           <div className="cat-head">
@@ -524,20 +515,31 @@ export default function Home() {
                     ❤️
                   </span>
                 </Button>
-                <Button size="lg" variant="outline" className="sm:w-auto">
-                  Learn More
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="sm:w-auto"
+                >
+                  <a
+                    href="https://wa.me/919922379106?text=I'm%20interested%20in%20adopting%20Kristine"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Learn More
+                  </a>
                 </Button>
               </div>
             </div>
-           <div className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden">
-           <Image
+            <div className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden">
+              <Image
                 src="/snapchatkristine.jpg"
                 alt="Florian Hurel Hair Couture & Spa"
                 width={480}
                 height={800}
                 className="rounded-lg shadow-lg object-cover"
               />
-</div>
+            </div>
           </div>
         </section>
 
@@ -752,28 +754,28 @@ export default function Home() {
           </div>
         </section>
 
-       
-
-
         <section id="gallery" className="py-20 bg-gray-50">
-  <div className="container mx-auto px-4">
-    <h2 className="text-3xl font-bold text-center mb-12">
-      Kristine's Gallery
-    </h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {galleryImages.map(({ id, src, alt }) => (
-        <div key={id} className="relative h-64 rounded-lg overflow-hidden">
-          <Image
-            src={src}
-            alt={alt}
-            fill
-            className="object-cover hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Kristine's Gallery
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {galleryImages.map(({ id, src, alt }) => (
+                <div
+                  key={id}
+                  className="relative h-64 rounded-lg overflow-hidden"
+                >
+                  <Image
+                    src={src}
+                    alt={alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section id="contact" className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -816,10 +818,10 @@ export default function Home() {
                         )}
                       </div>
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       <Label htmlFor="phone">Phone Number</Label>
-                      <div className="flex">
-                        <Phone className="h-5 w-5 mr-2 text-muted-foreground" />
+                      <div className="flex justify-center items-center">
+                        <Phone className="h-5 w-5 mr-2 text-muted-foreground " />
                         <Input
                           id="phone"
                           placeholder="Enter your phone number"
@@ -862,22 +864,27 @@ export default function Home() {
                   Or contact us directly:
                 </p>
                 <div className="flex justify-center gap-4">
-                  <Button variant="outline" className="gap-2">
-                    <Mail className="h-4 w-4" />
-                    Email Us
+                  <Button asChild variant="outline" className="gap-2">
+                    <a
+                      href="mailto:krishna.kushwaha2312@gmail.com"
+                      className="flex items-center"
+                    >
+                      <Mail className="h-4 w-4" />
+                      Email Us
+                    </a>
                   </Button>
-                  <Button variant="outline" className="gap-2">
-                    <Phone className="h-4 w-4" />
-                    Call Us
+
+                  <Button asChild variant="outline" className="gap-2">
+                    <a href="tel:9922379106" className="flex items-center">
+                      <Phone className="h-4 w-4" />
+                      Call Us
+                    </a>
                   </Button>
                 </div>
               </div>
             </div>
           </div>
         </section>
-
-
-        
       </main>
       <footer className="bg-white text-gray-800 py-12 border-t">
         <div className="container mx-auto px-4">
@@ -927,11 +934,21 @@ export default function Home() {
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-600">
                     <Mail className="h-4 w-4" />
-                    <span>adopt@kristine.example</span>
+                    <a
+                      href="mailto:krishna.kushwaha2312@gmail.com"
+                      className="text-blue-600 hover:underline"
+                    >
+                      krishna.kushwaha2312@gmail.com
+                    </a>
                   </li>
-                  <li className="flex items-center gap-2 text-gray-600">
+                  <li className="flex items-center gap-2  text-gray-600">
                     <Phone className="h-4 w-4" />
-                    <span>(123) 456-7890</span>
+                    <a
+                      href="tel:9922379106"
+                      className="text-blue-600 hover:underline "
+                    >
+                      9922379106
+                    </a>
                   </li>
                 </ul>
               </div>

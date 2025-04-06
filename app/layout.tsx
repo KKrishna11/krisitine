@@ -9,7 +9,9 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Kristine's Forever Home - Adopt a Loving Cat",
   description: "Meet Kristine, a loving and playful one-year-old cat looking for her forever home!",
-    generator: 'v0.dev'
+  icons: {
+    icon: "/kristine_favicon",
+  },
 }
 
 export default function RootLayout({
